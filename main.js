@@ -1,27 +1,29 @@
 var prompt = require('prompt-sync')();
 
 var questions = [
-	{text: 'question1', answer: 'answer1'},
-	{text: 'question2', answer: 'answer2'},
-	{text: 'question3', answer: 'answer3'},
-	// {text: 'question4', answer: 'answer4'},
-	// {text: 'question5', answer: 'answer5'},
-	// {text: 'question6', answer: 'answer6'},
-	// {text: 'question7', answer: 'answer7'},
-	// {text: 'question8', answer: 'answer8'},
-	// {text: 'question9', answer: 'answer9'},
-	// {text: 'question10', answer: 'answer10'},
-	// {text: 'question11', answer: 'answer11'},
-	// {text: 'question12', answer: 'answer12'},
-	// {text: 'question13', answer: 'answer13'},
-	// {text: 'question14', answer: 'answer14'},
-	// {text: 'question15', answer: 'answer15'},
+	{text: 'HTML is used to structure a webpage.', answer: 'True'},
+	{text: 'CSS stands for Computer Style Sheets.', answer: 'False'},
+	{text: 'Java and JavaScript are the same thing.', answer: 'False'},
+	{text: 'The following will change text color to black: color: #fff.', answer: 'False'},
+	{text: 'The <p> tag denotes a paragraph.', answer: 'True'},
+	{text: 'The <h6> tag denotes the largest heading.', answer: 'False'},
+	{text: 'The <bl> tag denotes a bulleted list.', answer: 'False'},
+	{text: 'You should put the link to your stylesheet within the <header> tag', answer: 'False'},
+	{text: '/* This is a CSS comment */', answer: 'True'},
+	{text: 'The bgcolor property controls the background color of an element.', answer: 'False'},
+	{text: 'The font-family property is used to specify the font of text in an element.', answer: 'True'},
+	{text: '4 == \'4\'', answer: 'True'},
+	{text: 'true and false are boolean values.', answer: 'True'},
+	{text: 'undefined is a falsey value.', answer: 'True'},
+	{text: 'NaN is not a number', answer: 'False'},
 ];
 
 var answer;
 var nCorrect = 0;
 var nWrong = 0;
 var percent;
+
+console.log('Answer the following questions TRUE or FALSE');
 
 for (var i = 0; i < questions.length; i++) {
 	answer = prompt(questions[i].text);
